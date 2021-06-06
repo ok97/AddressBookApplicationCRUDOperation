@@ -48,3 +48,10 @@ const remove = (node) => {
     createInnerHTML();
     location.reload();
 }
+
+const update = (node) => {
+    let addressBookData = addressBookList.find(addressData => addressData._id == node.id);
+    if (!addressBookData) return;
+    localStorage.setItem('editAddress', JSON.stringify(addressBookData));
+    window.location = "../pages/addressBookForm.html";
+}
