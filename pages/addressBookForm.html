@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Address Book Form</title>
+    <link rel="stylesheet" href="../css/addressBookForm.css" />
+    <script src="../js/addressBookForm.js" defer></script>
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <a href="../pages/addressBookHome.html"><img class="logo-content-img"
+                    src="../assets/icon.jpeg" alt=""></a>
+            <div>
+                <span class="address-text">ADDRESS</span><br>
+                <span class="address-text address-detail-text">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save(); return false">
+            <div class="form-head">ADDRESS BOOK FORM<a href="../pages/addressBookHome.html"><img class="logo-content-img-head"
+                        src="../assets/cross.jpeg" alt=""></a>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Your full name..." required>
+                <error-output class="text-error" for="text"></error-output>
+                <error-output class="text-error-new" for="text"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="phoneNumber">Phone Number</label>
+                <input class="input" type="number" id="phoneNumber" name="phoneNumber"
+                    placeholder="Your Phone Number..." required>
+                <phoneNumber-error-output class="phoneNumber-text-error" for="text"></phoneNumber-error-output>
+                <phoneNumber-error-output class="phoneNumber-text-error-new" for="text"></phoneNumber-error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="address">Address</label>
+                <textarea id="address" class="input" name="address" placeholder="Your complete address..."
+                    style="height:100px" required></textarea>
+                <address-error-output class="address-text-error" for="text"></address-error-output>
+                <address-error-output class="address-text-error-new" for="text"></address-error-output>
+            </div>
+            <div class="row-content">
+                <div class="inlineContent">
+                    <label class="label inlineText"
+                        for="city">City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="label inlineText"
+                        for="state">State</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="label inlineText" for="zipCode">Zip Code</label>
+                </div>
+
+                <div id="cityAndState">
+                    <select id="city" name="City" required>
+                        <option value="" disabled selected>Select city</option>                        
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>                        
+                        <option value="Indore">Nagpur</option>
+                        <option value="Ujjain">Amaravati</option>
+                        <option value="Ujjain">Nashik</option>
+                        <option value="Ujjain">Thane</option>
+                        <option value="Ujjain">Aurangabad</option>                        
+                        <option value="Ujjain">Yavatmal</option>
+                        <option value="Ujjain">Wardha</option>
+                        <option value="Ujjain">Chandrapur</option>
+                        <option value="Ujjain">Nanded</option>
+                        <option value="Bangalore">Bangalore</option>
+                    </select>
+                    <select id="state" name="State" required>
+                        <option value="" disabled selected>Select state</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Madhya Pradesh">Andhra Pradesh</option>
+                        <option value="Madhya Pradesh">Arunachal Pradesh</option>
+                        <option value="Madhya Pradesh">Assam</option>
+                        <option value="Madhya Pradesh">Bihar</option>
+                        <option value="Madhya Pradesh">Goa</option>
+
+                    </select>
+                    <input class="input" type="number" id="zipCode" name="zipCode" placeholder="Zip Code..." required>
+                </div>
+            </div>
+            <div class="buttonParent">
+                <a href="./addressBookHome.html" class="resetButton button cancelButton">Cancel</a>
+                <div class="submit-reset">
+                    <button type="submit" class="button addButton" id="addButton" onmouseover="">Add</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
